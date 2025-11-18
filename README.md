@@ -69,30 +69,30 @@ Protocol: HTTP POST with multipart/form-data
 Payload: Malicious ZIP files
 
 
-## Machine 1:
-# Clone repository
+# Machine 1:
+## Clone repository
 git clone https://github.com/ahmedsnaj30/Compression_Bomb.git
 cd Compression_Bomb
 
-# Create virtual environment
+## Create virtual environment
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+## Install dependencies
 ./setup.sh
 
-# Pause Here
+## Pause Here
 
-## Machine 2:
+# Machine 2:
 sudo apt update
 sudo apt install python3 python3-pip python3-flask python3-psutil -y
 
-# Copy vuln_service.py to this machine and start vulnerable service
+## Copy vuln_service.py to this machine and start vulnerable service
 python3 vuln_service.py
 
 
-## Machine 1:
-# Launch Attack
+# Machine 1:
+## Launch Attack
 python3 remote_attack.py <Machine 2 IP>
 
 
