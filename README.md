@@ -53,6 +53,7 @@ A **compression bomb** (also known as a "zip bomb" or "decompression bomb") is a
 **Classic Example:** The infamous `42.zip` file is only 42 kilobytes compressed but expands to 4.5 petabytes when fully extracted.
 
 ## Architecture
+```
 ┌─────────────────────────┐         ┌─────────────────────────┐
 │  Machine 1: Attacker    │────────>│  Machine 2: Target      │
 │  (WSL/Linux/macOS)      │  HTTP   │  (Kali VM)              │
@@ -61,6 +62,7 @@ A **compression bomb** (also known as a "zip bomb" or "decompression bomb") is a
 │  • Attack Scripts       │  5000)  │  • Limited Resources    │
 │  • Monitoring Tools     │         │  • Resource Monitor     │
 └─────────────────────────┘         └─────────────────────────┘
+```
         
 Network: 192.168.56.x/24 (Host-Only or NAT)
 Protocol: HTTP POST with multipart/form-data
