@@ -75,24 +75,31 @@ git clone https://github.com/ahmedsnaj30/Compression_Bomb.git
 cd Compression_Bomb
 
 ## Create virtual environment
+```
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-
+```
 ## Install dependencies
+```
 ./setup.sh
-
+```
 ## Pause Here
 
 # Machine 2:
+```
 sudo apt update
 sudo apt install python3 python3-pip python3-flask python3-psutil -y
+```
 
 ## Copy vuln_service.py to this machine and start vulnerable service
+```
 python3 vuln_service.py
-
+```
 
 # Machine 1:
 ## Launch Attack
+```
 python3 remote_attack.py <Machine 2 IP>
+```
 
 
